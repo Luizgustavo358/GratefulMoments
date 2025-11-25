@@ -22,3 +22,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+// section 4
+// https://developer.apple.com/tutorials/develop-in-swift/use-a-custom-layout-view
