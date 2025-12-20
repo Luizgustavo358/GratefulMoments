@@ -22,5 +22,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-// section 1 - step 4
+// section 4 - step 4
 // https://developer.apple.com/tutorials/develop-in-swift/create-an-algorithm-for-badges
