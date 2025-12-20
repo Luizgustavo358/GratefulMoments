@@ -9,18 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            Tab("Moments", image: "MomentsTab") {
+                MomentsView()
+            }
+            
+            Tab("Achievements", systemImage: "medal.fill") {
+                AchievementsView()
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .sampleDataContainer()
 }
-// section 4 - step 4
+// section 6 - step 1
 // https://developer.apple.com/tutorials/develop-in-swift/create-an-algorithm-for-badges
