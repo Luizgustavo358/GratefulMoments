@@ -31,6 +31,3 @@ struct ContentView: View {
         .sampleDataContainer()
         .preferredColorScheme(.dark)
 }
-
-// section 1 - step 1
-// https://developer.apple.com/tutorials/develop-in-swift/add-inclusive-features
