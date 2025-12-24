@@ -25,5 +25,12 @@ struct ContentView: View {
     ContentView()
         .sampleDataContainer()
 }
-// section 6 - step 1
-// https://developer.apple.com/tutorials/develop-in-swift/create-an-algorithm-for-badges
+
+#Preview("Dark") {
+    ContentView()
+        .sampleDataContainer()
+        .preferredColorScheme(.dark)
+}
+
+// section 1 - step 1
+// https://developer.apple.com/tutorials/develop-in-swift/add-inclusive-features
