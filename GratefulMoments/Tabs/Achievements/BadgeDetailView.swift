@@ -48,3 +48,13 @@ struct BadgeDetailView: View {
 #Preview {
     BadgeDetailView(badge: .sample)
 }
+
+#Preview("Spanish language") {
+    BadgeDetailView(badge: .sample)
+        .environment(\.locale, Locale(identifier: "es"))
+}
+
+#Preview("Portuguese language") {
+    BadgeDetailView(badge: .sample)
+        .environment(\.locale, Locale(identifier: "pt-BR"))
+}
