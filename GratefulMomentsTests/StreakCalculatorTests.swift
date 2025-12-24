@@ -1,16 +1,29 @@
 //
-//  GratefulMomentsTests.swift
-//  GratefulMomentsTests
+//  StreakCalculatorTests.swift
+//  StreakCalculatorTests
 //
 //  Created by Luiz Gustavo Bragança dos Santos on 23/12/25.
 //
 
 import Testing
+@testable import GratefulMoments
+import Foundation
 
-struct GratefulMomentsTests {
-
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+struct StreakCalculatorTests {
+    let streakCalculator = StreakCalculator()
+    let now = Date.now
+    
+    @Test func testCalculations() {
+        let days = [-2, -1]
+        let expectedStreak = 2
+        
+        let moments = days.map {
+            let date = Calendar.current.date(byAdding: .day, value: $0, to: now)!
+            return Moment(title: "", note: "", timestamp: date)
+        }
+        
+        let streak = streakCalculator.calculateStreak(for: moments)
+        #expect(streak == expectedStreak)
     }
 
 }
